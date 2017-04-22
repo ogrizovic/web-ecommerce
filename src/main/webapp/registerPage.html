@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+<!-- <script src="formValidationScript.js"></script> -->
+<title>Register user</title>
+</head>
+<body>
+<p>Register page.    <a href="index.jsp">Home</a> </p>
+<form id="registration-form">
+	<table>
+		<tr>
+			<td>Username: </td>
+			<td><input name="username" id="username" type="text"  /> </td>
+			<td><span id="error-username" style="color:red"></span></td>
+		</tr>
+		<tr>
+			<td>Password:</td>
+			<td><input name="password" id="password" type="password" /> </td>
+			<td><span id="error-password" style="color:red"></span></td>
+		</tr>
+		<!--
+		<tr>
+			<td>Repeat password:</td>
+			<td><input name="password-repeat" id="password-repeat" type="password" /> </td>
+			<td><span id="error-password-repeat" style="color:red"></span></td>
+		</tr>
+		-->
+		<tr>
+			<td>Name:</td>
+			<td><input name="name" id="name" type="text"  /></td>
+			<td><span id="error-name"></span></td>
+		</tr>
+		<tr>
+			<td>Surname:</td>
+			<td><input name="surname" id="surname" type="text"  /> </td>
+			<td><span id="error-surname"></span></td>
+		</tr>
+		<tr>
+			<td>Phone number:</td>
+			<td><input name="phone" id="phone" type="number"  /> </td>
+			<td><span id="error-phone"></span></td>
+		</tr>
+		<tr>
+			<td>Email:</td> 
+			<td><input name="email" id="email" type="text"  /> </td>
+			<td><span id="error-email"></span></td>
+		</tr>
+		<tr>
+			<td>Address:</td>
+			<td><input name="address" id="address" type="text"  /> </td>
+			<td><span id="error-address"></span></td>
+		</tr>
+		<tr>
+			<td>Role:</td>
+			<td><input type="radio" name="role" value="buyer" checked>Buyer<input type="radio" name="role" value="seller"   />Seller</td>
+		</tr>
+		<tr>
+			<td>Country:</td>
+			<td>
+				<select name="country" id="country">
+					<option value=1>Serbia</option>
+					<option value=2>Croatia</option>
+				</select>
+			</td>
+		</tr>
+	</table>
+	<button id="submit-button" type="submit" >Register</button>
+</form>
+<button id="button">btn</button>
+</body>
+
+<script>
+
+
+
+$("#registration-form").submit(function(e){
+	e.preventDefault();
+	var data = $("#registration-form").serialize();				// 0
+	var jsonData = JSON.stringify(data);						// 0
+	var arrayData = $("#registration-form").serializeArray();	// 0
+	var jsonArrayData = JSON.stringify(arrayData);				// 0
+
+	var impData = {
+		"username": $("#username").val(),
+		"password": $("#password").val(),
+		"name": $("#name").val(),
+		"surname": $("#surname").val(),
+		"role": $('input[name=role]:checked').val(),
+		"phone": $("#phone").val(),
+		"email": $("#email").val(),
+		"address": $("#address").val(),
+		"country": $("#country").val()
+
+	}
+
+	var jsonImpData = JSON.stringify(impData);					// 1
+
+	var impData2 = new Object();
+	impData2.username = $("#username").val();
+	impData2.password = $("#password").val();
+	// ...
+
+	console.log(data);
+	console.log(jsonData);
+	console.log(jsonImpData);
+
+	// $.post("http://localhost:8080/ecommerce/webapi/users", data).done(alert("Registered"));
+	$.ajax({
+		'headers': { 
+       	//	'Accept': 'application/json',
+       		'Content-Type': 'application/json' 
+   		},
+		'type': 'POST',
+		'url': 'http://localhost:8080/ecommerce/webapi/users',
+		'data': jsonImpData,
+		'dataType': 'application/json',
+		'success': alert("success")
+	}).done(alert("registrovan"));
+});
+
+$("#button").on('click', function(e){
+	$.ajax({
+		type: 'GET',
+		url: 'http://localhost:8080/ecommerce/webapi/users'
+	}).done(alert("Done get"));
+});
+
+</script>
+
+</html>

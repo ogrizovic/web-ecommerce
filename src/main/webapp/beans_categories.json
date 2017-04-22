@@ -1,0 +1,50 @@
+[
+    {
+      "name": "Nekretnine",
+      "description": "Kuce, stanovi...",
+      "subcategories": ["Kuce", "Stanovi"],
+	  "parent-category": ""
+	},
+	{
+      "name": "Kuce",
+      "description": "Kuce sa dvoristem",
+      "subcategories": [],
+      "parent-category": "Nekretnine"
+    },
+    {
+      "name": "Stanovi",
+      "description": "Stanovi u zgradama",
+      "subcategories": [],
+      "parent-category": "Nekretnine"
+    },
+    {
+      "name": "Motorna vozila",
+      "description": "Automobili, motocikli...",
+      "subcategories": ["Automobili", "Motocikli"],
+      "parent-category": ""  
+	},
+	{
+      "name": "Automobili",
+      "description": "Veliki izbor automobila",
+      "subcategories": ["Elektricni", "Na fosilna goriva"],
+      "parent-category": "Motorna vozila"
+	},
+	{
+      "name": "Elektricni",
+      "description": "Automobili na elektricni pogon",
+      "subcategories": [],
+      "parent-category": "Automobili"
+    },
+    {
+      "name": "Na fosilna goriva",
+      "description": "Automobili na fosilna goriva",
+      "subcategories": [],
+      "parent-category": "Automobili"
+    },
+    {
+      "name": "Motocikli",
+      "description": "Veliki izbor motocikala",
+      "subcategories": [],
+      "parent-category": "Motorna vozila"
+    }
+]

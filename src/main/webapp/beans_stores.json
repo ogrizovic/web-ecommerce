@@ -1,0 +1,24 @@
+[
+	{
+	  "id": "st1",
+	  "name": "Prodavnica 1",
+	  "address": "Ulica Prva",
+	  "country": "Serbia",
+	  "phone": 1,
+	  "email": "store1@a.com",
+	  "seller": "user2",
+	  "rating": 4.2,
+	  "reviews": []
+	},
+	{
+	  "id": "st2",
+	  "name": "Prodavnica 2",
+	  "address": "Ulica Druga",
+	  "country": "Serbia",
+	  "phone": 2,
+	  "email": "store2@a.com",
+	  "seller": "user2",
+	  "rating": 4.0,
+	  "reviews": []
+	}
+]

@@ -1,0 +1,35 @@
+[
+	{
+	  "username": "user1",
+	  "password": "user1",
+	  "name": "User1",
+	  "surname": "Userovic1",
+	  "role": "ADMIN",
+	  "phone": 111,
+	  "email": "111@a.com",
+	  "address": "Jedan",
+	  "country": "Serbia"
+	},
+	{
+	  "username": "user2",
+	  "password": "user2",
+	  "name": "User2",
+	  "surname": "Userovic2",
+	  "role": "SELLER",
+	  "phone": 222,
+	  "email": "222@a.com",
+	  "address": "Dva",
+	  "country": "Serbia"
+	},
+	{
+	  "username": "user3",
+	  "password": "user3",
+	  "name": "User3",
+	  "surname": "Userovic3",
+	  "role": "BUYER",
+	  "phone": 333,
+	  "email": "333@a.com",
+	  "address": "Tri",
+	  "country": "Serbia"
+	}
+]

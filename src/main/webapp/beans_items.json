@@ -1,0 +1,18 @@
+[
+    {
+      "id": "i1",
+      "name": "Kuca na sprat",
+      "colour": "Bela",
+      "dimensions": "200m2",
+      "weight": "",
+      "country-of-origin": "Serbia",
+      "manufacturer": "Slobodni zidari",
+      "price": 50000.0,
+      "category": "Kuce",
+      "images": [],
+      "video": "",
+      "rating": 3.4,
+      "reviews": [],
+      "in-stock": 1
+    }
+]

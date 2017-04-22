@@ -1,0 +1,23 @@
+[
+    {
+      "id": "c1",
+      "name": "Aks",
+      "description": "Kucna dostava",
+      "shipping-countries": [],
+      "price": 250.0
+    },
+    {
+      "id": "c2",
+      "name": "Beks",
+      "description": "Kucna dostava",
+      "shipping-countries": [],
+      "price": 300.0
+    },
+    {
+      "id": "c3",
+      "name": "Bljaks",
+      "description": "Kucna dostava",
+      "shipping-countries": [],
+      "price": 200.0
+    }
+]
