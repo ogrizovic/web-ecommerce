@@ -12,7 +12,7 @@ public class User {
 	private String country;
 	
 	public User() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	
